@@ -1,7 +1,8 @@
-package com.training.tri
+package com.training.tri.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.training.tri.R
 
 class MainActivity : AppCompatActivity() {
 
