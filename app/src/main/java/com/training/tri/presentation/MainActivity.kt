@@ -36,8 +36,5 @@ class MainActivity : AppCompatActivity() {
             bottomNavigation,
             navController
         )
-
-        val appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
     }
 }
