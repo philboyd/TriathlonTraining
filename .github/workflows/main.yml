@@ -21,7 +21,3 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-
-    # build debug APK and run unit tests
-    - name: Android Github Action
-      uses: Vukan-Markovic/Github-Android-Action@1.2
