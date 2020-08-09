@@ -9,6 +9,12 @@ object Deps {
         const val versionName = "0.1.0"
     }
 
+    object Core {
+        val data = ":core-data"
+        val domain = ":core-domain"
+        val ui = ":core-ui"
+    }
+
 
     val appcompat = dependency("androidx.appcompat:appcompat", Versions.appcomat)
 
@@ -27,6 +33,10 @@ object Deps {
     object Navigation : Group("androidx.navigation") {
         val fragment = withArtifact("navigation-fragment-ktx", Versions.navigation)
         val ui = withArtifact("navigation-ui-ktx", Versions.navigation)
+    }
+
+    object Test {
+        val runner = "testInstrumentationRunner Deps.Test.runner"
     }
 
     val viewpager2 = dependency("androidx.viewpager2:viewpager2", Versions.viewpager2)

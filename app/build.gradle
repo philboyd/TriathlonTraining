@@ -5,17 +5,17 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion Deps.Apk.compileSdkVersion
     buildToolsVersion "29.0.3"
 
     defaultConfig {
         applicationId "com.training.tri"
-        minSdkVersion 23
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion Deps.Apk.minSdkVersion
+        targetSdkVersion Deps.Apk.targetSdkVersion
+        versionCode Deps.Apk.versionCode
+        versionName Deps.Apk.versionName
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = Deps.Test.runner
     }
 
     buildTypes {
@@ -37,6 +37,11 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(Deps.Core.data)
+    implementation project(Deps.Core.domain)
+    implementation project(Deps.Core.ui)
+
     implementation Deps.kotlin
 
     implementation Deps.appcompat
