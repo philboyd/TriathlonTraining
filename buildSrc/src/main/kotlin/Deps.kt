@@ -22,7 +22,10 @@ object Deps {
 
     val constraintLayout = dependency("androidx.constraintlayout:constraintlayout", Versions.constraintLayout)
 
-    val coroutines = dependency("org.jetbrains.kotlinx:kotlinx-coroutines-android", Versions.coroutine)
+    object Coroutines : Group("org.jetbrains.kotlinx") {
+        val android = withArtifact("kotlinx-coroutines-android", Versions.coroutines)
+        val test = withArtifact("kotlinx-coroutines-test", Versions.coroutines)
+    }
 
     val epoxy = dependency("com.airbnb.android:epoxy", Versions.epoxy)
 
@@ -37,6 +40,14 @@ object Deps {
 
     object Test {
         val runner = "testInstrumentationRunner Deps.Test.runner"
+
+        val core = dependency("androidx.test:core", Versions.testCore)
+        val testExt = dependency("androidx.test.ext:junit", Versions.testExt)
+        val junit = dependency("junit:junit", Versions.junit)
+        val kotest = dependency("io.kotest:kotest-runner-junit5-jvm", Versions.kotest)
+        val kotestAssertion = dependency("io.kotest:kotest-assertions-core-jvm", Versions.kotest)
+        val kotestProperty = dependency("io.kotest:kotest-property-jvm", Versions.kotest)
+        val mockk = dependency("io.mockk:mockk", Versions.mockk)
     }
 
     val viewpager2 = dependency("androidx.viewpager2:viewpager2", Versions.viewpager2)
@@ -56,11 +67,16 @@ object Versions {
     const val androidCore = "1.3.1"
     const val appcomat = "1.2.0"
     const val constraintLayout = "1.1.3"
-    const val coroutine = "1.3.8"
+    const val coroutines = "1.3.8"
     const val epoxy = "3.10.0"
+    const val junit = "4.13"
+    const val kotest = "4.0.5"
     const val kotlin = "1.3.70"
     const val material = "1.3.0-alpha02"
+    const val mockk = "1.9.3"
     const val navigation = "2.3.0"
+    const val testCore = "1.2.0"
+    const val testExt = "1.1.1"
     const val viewpager2 = "1.0.0"
 
 }

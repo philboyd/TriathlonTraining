@@ -43,4 +43,13 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation Deps.kotlin
+
+    implementation Deps.Coroutines.android
+
+    testImplementation Deps.Coroutines.test
+    testImplementation Deps.Test.junit
+    testImplementation Deps.Test.kotest
+    testImplementation Deps.Test.kotestAssertion
+    implementation Deps.Test.kotestProperty
+    testImplementation Deps.Test.mockk
 }

@@ -55,5 +55,5 @@ dependencies {
 
     implementation Deps.epoxy
 
-    implementation Deps.coroutines
+    implementation Deps.Coroutines.android
 }
