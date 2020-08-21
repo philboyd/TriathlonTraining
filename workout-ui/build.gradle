@@ -50,7 +50,10 @@ dependencies {
     implementation Deps.androidCore
     implementation Deps.constraintLayout
     implementation Deps.material
-    implementation Deps.viewpager2
+
+    implementation Deps.DaggerHilt.android
+    kapt Deps.DaggerHilt.compiler
+    testImplementation Deps.DaggerHilt.test
 
     implementation Deps.Coroutines.android
 
