@@ -27,6 +27,13 @@ object Deps {
         val test = withArtifact("kotlinx-coroutines-test", Versions.coroutines)
     }
 
+    object DaggerHilt : Group("com.google.dagger") {
+        val android = withArtifact("hilt-android", Versions.dagger)
+        val compiler = withArtifact("hilt-android-compiler", Versions.dagger)
+        val plugin = withArtifact("hilt-android-gradle-plugin", Versions.dagger)
+        val test = withArtifact("hilt-android-testing", Versions.dagger)
+    }
+
     val epoxy = dependency("com.airbnb.android:epoxy", Versions.epoxy)
 
     val kotlin = dependency("org.jetbrains.kotlin:kotlin-stdlib-jdk7", Versions.kotlin)
@@ -68,6 +75,7 @@ object Versions {
     const val appcomat = "1.2.0"
     const val constraintLayout = "1.1.3"
     const val coroutines = "1.3.8"
+    const val dagger = "2.28.3-alpha"
     const val epoxy = "3.10.0"
     const val junit = "4.13"
     const val kotest = "4.0.5"

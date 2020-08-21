@@ -3,6 +3,8 @@ import dependencies.Deps
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion Deps.Apk.compileSdkVersion
@@ -50,10 +52,18 @@ dependencies {
     implementation Deps.material
     implementation Deps.viewpager2
 
+    implementation Deps.DaggerHilt.android
+    kapt Deps.DaggerHilt.compiler
+    testImplementation Deps.DaggerHilt.test
+
     implementation Deps.Navigation.ui
     implementation Deps.Navigation.fragment
 
     implementation Deps.epoxy
 
     implementation Deps.Coroutines.android
+}
+
+kapt {
+    correctErrorTypes true
 }
