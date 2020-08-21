@@ -1,8 +1,10 @@
 package com.training.tri.workout.ui
 
 import com.training.tri.core.ui.ViewModel
+import javax.inject.Inject
 
-class WorkoutViewModel : ViewModel<WorkoutViewModel.ViewState, WorkoutViewModel.Action>(ViewState(), update) {
+class WorkoutViewModel @Inject constructor() :
+    ViewModel<WorkoutViewModel.ViewState, WorkoutViewModel.Action>(ViewState(), update) {
 
     data class ViewState(
         val placeholder: Int = 0
@@ -13,6 +15,7 @@ class WorkoutViewModel : ViewModel<WorkoutViewModel.ViewState, WorkoutViewModel.
     }
 }
 
-private val update: (WorkoutViewModel.ViewState, WorkoutViewModel.Action) -> WorkoutViewModel.ViewState = { state, action ->
+private val update: (WorkoutViewModel.ViewState, WorkoutViewModel.Action) -> WorkoutViewModel.ViewState =
+    { state, action ->
         state
     }

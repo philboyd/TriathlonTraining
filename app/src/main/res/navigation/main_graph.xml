@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/todayFragment"
-        android:name="com.training.tri.presentation.today.TodayFragment"
-        android:label="fragment_today"
-        tools:layout="@layout/fragment_today" >
+        android:name="com.training.tri.workout.ui.WorkoutFragment"
+        android:label="fragment_workout"
+        tools:layout="@layout/fragment_workout" >
         <action
             android:id="@+id/action_todayFragment_to_logWorkoutFragment"
             app:destination="@id/logWorkoutFragment"

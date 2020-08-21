@@ -4,6 +4,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion Deps.Apk.compileSdkVersion
@@ -56,6 +58,7 @@ dependencies {
     testImplementation Deps.DaggerHilt.test
 
     implementation Deps.Coroutines.android
+    implementation Deps.Lifecycle.runtime
 
     testImplementation Deps.Coroutines.test
     testImplementation Deps.Test.junit
