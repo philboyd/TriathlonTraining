@@ -15,6 +15,10 @@ object Deps {
         val ui = ":core-ui"
     }
 
+    object Workout {
+        val ui = ":workout-ui"
+    }
+
 
     val appcompat = dependency("androidx.appcompat:appcompat", Versions.appcomat)
 

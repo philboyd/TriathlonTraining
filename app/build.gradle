@@ -43,6 +43,7 @@ dependencies {
     implementation project(Deps.Core.data)
     implementation project(Deps.Core.domain)
     implementation project(Deps.Core.ui)
+    implementation project(Deps.Workout.ui)
 
     implementation Deps.kotlin
 
