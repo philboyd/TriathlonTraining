@@ -46,6 +46,12 @@ dependencies {
 
     implementation Deps.kotlin
 
+    implementation Deps.appcompat
+    implementation Deps.androidCore
+    implementation Deps.constraintLayout
+    implementation Deps.material
+    implementation Deps.viewpager2
+
     implementation Deps.Coroutines.android
 
     testImplementation Deps.Coroutines.test
