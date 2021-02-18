@@ -16,6 +16,7 @@ object Deps {
     }
 
     object Workout {
+        val domain = ":workout-domain"
         val ui = ":workout-ui"
     }
 
@@ -49,6 +50,8 @@ object Deps {
         val process = withArtifact("lifecycle-process", Versions.lifecycle)
         val common = withArtifact("lifecycle-common-java8", Versions.lifecycle)
     }
+
+    val lottie = dependency("com.airbnb.android:lottie", Versions.lottie)
 
     val material = dependency("com.google.android.material:material", Versions.material)
 
@@ -93,6 +96,7 @@ object Versions {
     const val kotest = "4.0.5"
     const val kotlin = "1.3.70"
     const val lifecycle = "2.2.0"
+    const val lottie = "3.4.2"
     const val material = "1.3.0-alpha02"
     const val mockk = "1.9.3"
     const val navigation = "2.3.0"

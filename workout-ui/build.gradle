@@ -45,6 +45,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(Deps.Core.ui)
+    implementation project(Deps.Workout.domain)
 
     implementation Deps.kotlin
 
@@ -56,6 +57,8 @@ dependencies {
     implementation Deps.DaggerHilt.android
     kapt Deps.DaggerHilt.compiler
     testImplementation Deps.DaggerHilt.test
+
+    implementation Deps.lottie
 
     implementation Deps.Coroutines.android
     implementation Deps.Lifecycle.runtime
